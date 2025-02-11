@@ -4,7 +4,7 @@ if (Get-PSRepository | Where-Object { $_.Name -eq "PSGallery" -and $_.Installati
     Install-PackageProvider -Name "NuGet" -MinimumVersion 2.8.5.208 -Force
     Set-PSRepository -Name "PSGallery" -InstallationPolicy "Trusted"
 }
-
+write-host Test
 
 # Install or Update Evergreen
 $Installed = Get-Module -Name "Evergreen" -ListAvailable | `
